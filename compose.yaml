@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+    command: ["python3", "app.py"]
+  test:
+    build: .
+    depends_on:
+      - api
+    environment:
+      SERVICE_URL: http://api:8080
+    command: ["python3", "-m", "unittest", "discover", "-s", "tests", "-v"]
