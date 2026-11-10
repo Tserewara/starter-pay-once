@@ -24,6 +24,10 @@ requests=40 statuses=[...] charges=N duplicate_charges=N
 
 The service still behaves the way it did on Friday. Your job is to change that while keeping the validation and the response contract it already has.
 
+## If you work with a coding agent
+
+This repository ships instructions for it (`AGENTS.md`, `CLAUDE.md` and `.claude/skills/bgym/`). They ask the agent to bring the evidence and leave the explaining to you. They are yours: delete them if you would rather work without.
+
 ## API
 
 `POST /v1/charges` takes `amount` in cents, `currency` (`usd` or `eur`) and `customer`. `GET /charges` lists what's stored, for inspection. Nothing talks to a real payment provider.
